@@ -1,0 +1,264 @@
+body{
+    margin:0;
+    width:2600px;
+     font-family: sans-serif;
+     background-color:#222;
+}
+h2{
+    text-align: center;
+    margin-top: 10px;
+    margin:0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-shadow:5px 5px 5px #eee;
+}
+a{
+    color:#ff7879;
+}
+form{
+    color:#ff7879;
+    background-color:transparent;
+    padding: 0 20px;
+    margin:0px;
+    margin-bottom: 10px;
+    box-shadow:2px 3px 5px #5a1236;
+    margin-top: 0px;
+    text-shadow: 0 0 0  #5a1236;
+    border-radius: 8px;
+}
+
+.form_input{
+    margin:0;
+    display:inline-block;
+    height:30px;
+    border:none;
+    border-left: 2px solid #5a1236;
+    box-shadow:0px 0px 10px #5a1236;
+    background-color: transparent;
+    text-shadow: #eee;
+    color:#eee;   
+}
+
+input,textarea{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    border:none;
+    border-left: 2px solid #5a1236;
+    background-color: transparent;
+    text-shadow: #eee;
+    color:#eee;
+    resize:none
+}
+
+ /* clases de div */
+.mrows{
+    width:180px;
+    margin:0;
+    padding:0;
+}
+
+.EspacioDiv{
+    width:470px;
+    margin:0
+}
+
+
+.UnidadAcademicaDiv{
+    width:160px;
+    margin:0
+}
+
+
+
+.BienesAdjudicadosDiv{
+    width:160px;
+}
+.InversionEspacioDiv{
+    width:205px;
+    margin:0
+}
+
+.ProgramaAcademicoDiv{
+    width:275px;
+}
+.Link{
+    width:130px;
+    box-shadow:none;
+}
+
+
+
+
+
+
+ /* clases de textarea */
+
+.R1{ 
+    height:30px;
+}
+
+.Numero{
+    width:80px;
+}
+.ClavedeCartera{
+    width:146px;
+}
+.Folio{
+    width:140px;
+}
+.Nombre{
+    width:200px;
+}
+.UnidadAcademica{
+    width:160px;
+}
+.Nivel{
+    width:70px
+}
+.BienesSolicitados{
+    width: 180px;
+}
+.BienesAdjudicados{
+    width:160px;
+}
+.Espacio{
+    width:470px;
+}
+.ProgramaAcademico{
+    width:275px;
+}
+.InversionEspacio{
+    width:205px;
+}
+.InversionUA{ 
+    width:180px;
+}
+.InversionTotal{ 
+    width:180px;
+}
+.Links{ 
+    width:130px;
+}
+.Encabezado{ 
+    text-transform:uppercase;
+}
+
+.Datos{ 
+    height:20px;
+    background-color: #fff;
+    color:#5a1236;
+}
+.DatosG{ 
+    background-color: #fff;
+    color:#5a1236;
+    height:210px;
+}
+
+.linkRelleno{
+    background:transparent;
+    box-shadow:none ;
+    border-left: none;
+}
+
+.C1UA1{ 
+    background-color: #fff;
+    color:#5a1236;
+    height:210px;
+}
+
+
+.C2UA1{ 
+    background-color: #fff;
+    color:#5a1236;
+    height:92px;
+}
+
+.C2UA2{ 
+    background-color: #fff;
+    color:#5a1236;
+    height: 68px;
+}
+
+.C2UA3{ 
+    background-color: #fff;
+    color:#5a1236;
+    height: 45px;
+}
+
+.C2UA4{ 
+    background-color: #fff;
+    color:#5a1236;
+    height: 45px;
+}
+
+.C2UA5{ 
+    background-color: #fff;
+    color:#5a1236;
+    height: 68px;
+}
+
+.C2UA6{ 
+    background-color: #fff;
+    color:#5a1236;
+    height: 45px;
+}
+ 
+
+.C3UA1{ 
+    background-color: #fff;
+    color:#5a1236;
+    height:140px;
+}
+
+.C4UA1{ 
+    background-color: #fff;
+    color:#5a1236;
+    height:384px;
+}
+
+
+.C5UA1{ 
+    background-color: #fff;
+    color:#5a1236;
+    height:264px;
+}
+
+
+
+
+
+
+
+.DatosG1{ 
+    background-color: #fff;
+    color:#5a1236;
+    height:210px;
+}
+
+
+
+.DatosG2{ 
+    background-color: #fff;
+    color:#5a1236;
+    height:384px;
+}
+
+.DatosG3{ 
+    background-color: #fff;
+    color:#5a1236;
+    height:140px;
+}
+
+.DatosG4{ 
+    background-color: #fff;
+    color:#5a1236;
+    height:384px;
+}
+
+
+.DatosG5{ 
+    background-color: #fff;
+    color:#5a1236;
+    height:264px;
+}
