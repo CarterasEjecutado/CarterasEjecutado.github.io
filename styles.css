@@ -1,264 +1,301 @@
 body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#DCDCDE;
     margin:0;
-    width:2600px;
-     font-family: sans-serif;
-     background-color:#222;
+    padding:10px;
+    color:#000;
 }
-h2{
-    text-align: center;
-    margin-top: 10px;
-    margin:0;
-    margin-bottom: 10px;
+
+h1{
+    text-align:center;
+    color:#611232;
+    margin-bottom:20px;
+}
+.imagenes {
+    /*
+    display: flex;
+    gap: 0px;*/
+  /*  display: grid;
+    grid-template-columns: 20% 55% 20%; /* siempre dos columnas 
+    gap: 10px;*/
+/* width:100%; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* separa de bordes */
+    gap:20px;
+    background-color:#fff;
+}
+/*
+.imagenes img {
+    width: 100%;
+
+}
+    */
+@media (max-width: 768px) {
+    .imagenes img {
+    width: 100%;
+    height: 80px;
+}
+
+
+
+
+.imagenes img {
+  height: 80px;        /* todas parejas */
+  width: auto;         /* NO se estiran */
+  flex-shrink: 0;      /* no se aplastan */
+}
+
+/* imagen central un poco más chica */
+.imagenes .centro {
+  height: 100px;        /* ajusta a gusto */
+}
+
+
+.imagenes > div {
+  max-width: 400px;   /* fuerza salto de línea */
+  text-align: center;
+  flex: 1;            /* ocupa solo el centro */
+  margin-left: -120px;
+}
+
+.imagenes h2 {
+  margin: 0px;
+  margin-top: 5px;
+  margin-left: -20px;  
+  line-height: 1.2;
+  font-size: 1.1rem;
+  white-space: normal;
+}}
+
+.A5000{
+    max-width: 400px;
+}
+
+
+
+
+
+
+
+/* ===========================
+   TABLA
+=========================== */
+
+.tabla_style{
+    width:100%;
+/*    border-collapse:separate;
+    border-spacing:4px;
+*/
+    }
+
+.tabla_style td{
+/*    vertical-align:top;
+*/
+/*    border:none;
+*/    padding:0;
+}
+
+/* ===========================
+   ETIQUETAS
+=========================== */
+
+.label_table,.turnadosL{
+    display:block;
+    width:100%;
+    background:#611232;
+    color:white;
+    font-size:13px;
+    font-weight:bold;
+
+    padding:6px 10px;
+
+border-radius:6px 6px 0 0;
     text-transform: uppercase;
-    text-shadow:5px 5px 5px #eee;
-}
-a{
-    color:#ff7879;
-}
-form{
-    color:#ff7879;
-    background-color:transparent;
-    padding: 0 20px;
-    margin:0px;
-    margin-bottom: 10px;
-    box-shadow:2px 3px 5px #5a1236;
-    margin-top: 0px;
-    text-shadow: 0 0 0  #5a1236;
-    border-radius: 8px;
 }
 
-.form_input{
-    margin:0;
-    display:inline-block;
-    height:30px;
-    border:none;
-    border-left: 2px solid #5a1236;
-    box-shadow:0px 0px 10px #5a1236;
-    background-color: transparent;
-    text-shadow: #eee;
-    color:#eee;   
+.Encabezado{
+    background:#611232;
+    color:#FFF;
+    text-transform: uppercase;
+}
+.turnadosL{
+    width:100%;
+    min-width: 450px;
+    padding: 0;
 }
 
-input,textarea{
-    box-sizing:border-box;
-    margin:0;
+.turnados{
+    display: inline-flex;
+    gap: 2px;
+/*     display: flex;
+*/
+     padding: 0;
+
+}
+/* ===========================
+   INPUTS
+=========================== */
+
+input,
+select,
+textarea{
+
+    width:100%;
     padding:0;
-    border:none;
-    border-left: 2px solid #5a1236;
-    background-color: transparent;
-    text-shadow: #eee;
-    color:#eee;
-    resize:none
+    font-size:14px;
+
+    border:1px solid #BDBDBD;
+
+    border-radius:0 0 6px 6px;
+
+    background:#FFF;
+
+    outline:none;
+
+    transition:.2s;
+
 }
 
- /* clases de div */
-.mrows{
-    width:180px;
-    margin:0;
-    padding:0;
+input:focus,
+textarea:focus,
+select:focus{
+
+    border-color:#611232;
+
+    box-shadow:0 0 5px rgba(97,18,50,.35);
+
 }
 
-.EspacioDiv{
-    width:470px;
-    margin:0
+/* ===========================
+   TEXTAREA
+=========================== */
+
+textarea{
+
+    resize:vertical;
+    min-height:70px;
+
 }
 
+/* ===========================
+   CHECKBOXES
+=========================== */
 
-.UnidadAcademicaDiv{
-    width:160px;
-    margin:0
-}
+.turnado{
 
+    background:white;
 
+    border:1px solid #CCC;
 
-.BienesAdjudicadosDiv{
-    width:160px;
-}
-.InversionEspacioDiv{
-    width:205px;
-    margin:0
-}
+    border-radius:8px;
 
-.ProgramaAcademicoDiv{
-    width:275px;
-}
-.Link{
-    width:130px;
-    box-shadow:none;
+    padding:10px;
+
 }
 
+.turnado h3{
 
+    margin:0 0 10px;
 
+    color:#611232;
 
+    font-size:15px;
 
-
- /* clases de textarea */
-
-.R1{ 
-    height:30px;
-}
-
-.Numero{
-    width:80px;
-}
-.ClavedeCartera{
-    width:146px;
-}
-.Folio{
-    width:140px;
-}
-.Nombre{
-    width:200px;
-}
-.UnidadAcademica{
-    width:160px;
-}
-.Nivel{
-    width:70px
-}
-.BienesSolicitados{
-    width: 180px;
-}
-.BienesAdjudicados{
-    width:160px;
-}
-.Espacio{
-    width:470px;
-}
-.ProgramaAcademico{
-    width:275px;
-}
-.InversionEspacio{
-    width:205px;
-}
-.InversionUA{ 
-    width:180px;
-}
-.InversionTotal{ 
-    width:180px;
-}
-.Links{ 
-    width:130px;
-}
-.Encabezado{ 
-    text-transform:uppercase;
 }
 
-.Datos{ 
-    height:20px;
-    background-color: #fff;
-    color:#5a1236;
-}
-.DatosG{ 
-    background-color: #fff;
-    color:#5a1236;
-    height:210px;
-}
+.turnado label{
 
-.linkRelleno{
     background:transparent;
-    box-shadow:none ;
-    border-left: none;
+
+    color:#000;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:3px 0;
+
+    font-weight:normal;
+
 }
 
-.C1UA1{ 
-    background-color: #fff;
-    color:#5a1236;
-    height:210px;
+.turnado input[type="checkbox"]{
+
+    width:auto;
+
+    border:none;
+
+    box-shadow:none;
+
 }
 
+/* ===========================
+   ANCHOS
+=========================== */
 
-.C2UA1{ 
-    background-color: #fff;
-    color:#5a1236;
-    height:92px;
+.campoCorto{
+
+    width:180px;
+
 }
 
-.C2UA2{ 
-    background-color: #fff;
-    color:#5a1236;
-    height: 68px;
+.campoMedio{
+
+    width:250px;
+
 }
 
-.C2UA3{ 
-    background-color: #fff;
-    color:#5a1236;
-    height: 45px;
+.campoLargo{
+
+    width:100%;
+
 }
 
-.C2UA4{ 
+td {
     background-color: #fff;
-    color:#5a1236;
-    height: 45px;
+    color: #000;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid #000;
 }
 
-.C2UA5{ 
-    background-color: #fff;
-    color:#5a1236;
-    height: 68px;
+.input_tabla {
+    width: 100%;
+    /*border: none;*/
+    border-bottom:1px solid #DDC9A3;
+    border-radius: 10px;
 }
 
-.C2UA6{ 
-    background-color: #fff;
-    color:#5a1236;
-    height: 45px;
-}
- 
-
-.C3UA1{ 
-    background-color: #fff;
-    color:#5a1236;
-    height:140px;
+.input_tabla:focus {
+    outline: none;
 }
 
-.C4UA1{ 
-    background-color: #fff;
-    color:#5a1236;
-    height:384px;
+.tabla_style {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 5px;
 }
 
-
-.C5UA1{ 
-    background-color: #fff;
-    color:#5a1236;
-    height:264px;
+.tabla_style td {
+    padding: 6px;
+    overflow: hidden;
 }
 
-
-
-
-
-
-
-.DatosG1{ 
-    background-color: #fff;
-    color:#5a1236;
-    height:210px;
+.tabla_style input,
+.tabla_style textarea,
+.tabla_style select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
-
-
-.DatosG2{ 
-    background-color: #fff;
-    color:#5a1236;
-    height:384px;
-}
-
-.DatosG3{ 
-    background-color: #fff;
-    color:#5a1236;
-    height:140px;
-}
-
-.DatosG4{ 
-    background-color: #fff;
-    color:#5a1236;
-    height:384px;
-}
-
-
-.DatosG5{ 
-    background-color: #fff;
-    color:#5a1236;
-    height:264px;
+.capturaDeDatos th:nth-child(4),
+.capturaDeDatos td:nth-child(4){
+    width: 40%;
+    min-width: 450px;
 }
