@@ -44,20 +44,21 @@ function agregarFila(numeroFila){
 
     fila.innerHTML = `
                            <td 
-                                name="NoTurnadoR${i}"
-                                id="NoTurnadoR${i}"> </td>                    
+                                <input type="text" name="NoTurnadoR${i}"  id="NoTurnadoR${i}" readonly>
+                                
+                                > </td>                    
          
                            <td>
-                           <input type="text" name="folioR${i}"  id="folioR${i}">
+                           <input type="text" name="folioR${i}"  id="folioR${i}" readonly>
                              </td>
                         
 
                             <td>
-                            <input type="date" name="fechaRecepcionR${i}" id="fechaRecepcionR${i}">
+                            <input type="date" name="fechaRecepcionR${i}" id="fechaRecepcionR${i}" readonly>
                             </td>
                            
                      <td>
-                            <input type="text" name="tipoDocumentoR${i}" id="tipoDocumentoR${i}">
+                            <input type="text" name="tipoDocumentoR${i}" id="tipoDocumentoR${i}" readonly>
                      </td>
                      
                      <td >
@@ -66,29 +67,30 @@ function agregarFila(numeroFila){
                      class="paso"
                      name="turnadoAR${i}"
                      id="turnadoAR${i}"
+                     readonly
                      > 
                     </td>
                      <td>
-                                <input type="text" name="correspondenciaR${i}" id="correspondenciaR${i}">
+                                <input type="text" name="correspondenciaR${i}" id="correspondenciaR${i}" readonly>
                        </td>
                                       
                        <td>
-                                      <input type="date" name="fechaFolioR${i}" id="fechaFolioR${i}">
+                                      <input type="date" name="fechaFolioR${i}" id="fechaFolioR${i}" readonly>
                        </td>
                                       
                         <td>
-                                      <input type="text" name="noOficioR${i}" id="noOficioR${i}">
+                                      <input type="text" name="noOficioR${i}" id="noOficioR${i}" readonly>
 
                         </td>   
                       
                         <td>
-                                    <textarea name="remitenteR${i}" id="remitenteR${i}" ></textarea>
+                                    <textarea name="remitenteR${i}" id="remitenteR${i}" readonly></textarea>
 
                        </td>     
 
                         <td>
                              
-                                   <input type="text" name="dirigidoAR${i}" id="dirigidoAR${i}">
+                                   <input type="text" name="dirigidoAR${i}" id="dirigidoAR${i}"readonly>
 
                         </td>
                          
@@ -107,6 +109,7 @@ function agregarFila(numeroFila){
                                      <span 
                                              id="nombreaArchivoR${i}" 
                                              class="nombreArchivo"
+                                             readonly
                                      ></span>
                 
 
@@ -128,30 +131,30 @@ function agregarFila(numeroFila){
 
                     <td>
 
-                         <textarea  name="asuntoR${i}" id="asuntoR${i}" ></textarea>
+                         <textarea  name="asuntoR${i}" id="asuntoR${i}" readonly></textarea>
                     </td>
                      
                     
                     <td>
-                             <input type="date"  name="fechaLimiteR${i}"  id="fechaLimiteR${i}">
+                             <input type="date"  name="fechaLimiteR${i}"  id="fechaLimiteR${i}" readonly>
 
                      </td>     
                              
                       <td>
-                                     <input type="date" name="fechaTurnadoR${i}" id="fechaTurnadoR${i}">
+                                     <input type="date" name="fechaTurnadoR${i}" id="fechaTurnadoR${i}" readonly>
 
                       </td>
 
                     
                     
                         <td> 
-                            <input class="label_table" type="text" name="medioTurnadoR${i}" id="medioTurnadoR${i}">
+                            <input class="label_table" type="text" name="medioTurnadoR${i}" id="medioTurnadoR${i}" readonly>
                        </td>     
                         <td>     
-                                  <input type="text" name="instruccionR${i}" id="instruccionR${i}">
+                                  <input type="text" name="instruccionR${i}" id="instruccionR${i}" readonly>
                         </td>     
                         <td>
-                                     <input type="text" name="archivadoEnR${i}" id="archivadoEnR${i}">
+                                     <input type="text" name="archivadoEnR${i}" id="archivadoEnR${i}" readonly>
                         </td>
                         
                         <td>
@@ -451,6 +454,135 @@ if (campo.type === "checkbox") {
         //}
     });
 }
+const areasRespuesta = {
+    1: "Direccion",
+    2: "DivPlaneacion",
+    3: "DivProyectos",
+    4: "Sadministrativos",
+    5: "Acuerdos"
+};
+
+document.getElementById("tablaBody")
+    .addEventListener("change", async function(event) {
+
+        const campoHTML = event.target;
+
+        const coincidencia = campoHTML.name?.match(
+            /^(recepciondeAcuse|FRecepciondeAcuse|estatus|observaciones|archivoRespuesta)A([1-5])R(\d+)$/
+        );
+
+        if (!coincidencia) return;
+
+        const nombreCampo = coincidencia[1];
+        const numeroArea = Number(coincidencia[2]);
+        const filaHoja = Number(coincidencia[3]);
+
+        const area = areasRespuesta[numeroArea];
+
+        const fila = campoHTML.closest("tr");
+
+        if (
+            !fila ||
+            Number(fila.dataset.filaHoja) !== filaHoja
+        ) return;
+
+        const areaActual =
+            document.getElementById("area").value;
+
+        // Cada área modifica únicamente sus respuestas.
+        // El administrador puede editar cualquiera.
+        if (areaActual !== "Admin" && areaActual !== area) {
+            return;
+        }
+
+        const noOficio =
+            document.getElementById(`noOficioR${filaHoja}`)?.value.trim();
+
+        const tipoDocumento =
+            document.getElementById(`tipoDocumentoR${filaHoja}`)?.value.trim();
+
+        let valor;
+
+        if (campoHTML.type === "checkbox") {
+            valor = campoHTML.checked;
+
+        } else if (campoHTML.type === "file") {
+
+            const archivo = campoHTML.files?.[0];
+
+            if (!archivo) return;
+
+            if (archivo.size > 3 * 1024 * 1024) {
+                alert("El archivo no debe superar 3 MB.");
+                return;
+            }
+
+            valor = await leerArchivoRespuesta(archivo);
+
+        } else {
+            valor = campoHTML.value;
+        }
+
+        try {
+
+            const res = await fetch(direccionEnlace, {
+                method: "POST",
+                body: JSON.stringify({
+                    action: "guardarCambioRespuesta",
+                    filaHoja,
+                    noOficio,
+                    tipoDocumento,
+                    area,
+                    campo: nombreCampo,
+                    valor
+                })
+            });
+
+            if (!res.ok) {
+                throw new Error(`Error HTTP ${res.status}`);
+            }
+
+            const respuesta = await res.json();
+
+            if (respuesta.success !== true) {
+                throw new Error(
+                    respuesta.message ||
+                    "No se pudo guardar el cambio"
+                );
+            }
+
+            console.log("Campo guardado:", campoHTML.name);
+
+        } catch (error) {
+
+            alert(
+                `No se guardó ${campoHTML.name}: ${error.message}`
+            );
+        }
+    });
+
+function leerArchivoRespuesta(archivo) {
+
+    return new Promise((resolve, reject) => {
+
+        const lector = new FileReader();
+
+        lector.onload = () => resolve({
+            nombre: archivo.name,
+            tipo: archivo.type || "application/octet-stream",
+            contenido: String(lector.result).split(",")[1]
+        });
+
+        lector.onerror = () =>
+            reject(new Error("No se pudo leer el archivo"));
+
+        lector.readAsDataURL(archivo);
+    });
+}
+
+
+
+
 function mostrarColumnasPorArea(area) {
 
     const grupos = {
