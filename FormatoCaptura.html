@@ -28,7 +28,7 @@
 
 <h1>Correo DPO-Formato de Captura</h1>
 
-    <form id="formCaptura">
+    
 
     <!-- Columna izquierda -->
     
@@ -44,11 +44,7 @@
         </a>
  </div>
 
-    <!-- Datos principales -->
-<table class="tabla_style capturaDeDatos" title="Captura de datos">
-    <thead>
 
-    </thead>
 <!--    
     <div>
         <label><input type="checkbox" id="capturar"> Capturar</label><br>
@@ -58,20 +54,61 @@
         <label><input type="checkbox" id="revisarFechas"> Revisar Fechas</label>
     </div>
 -->    
-    <tbody>
+<form id="formCorreccion"> 
+   <div class="busquedadeDatos">
+                                            <fieldset class="TablaFS"> 
+                                            <legend class="TablaLeg" >Rubros de Busqueda para corrección</legend>
+                   <div class="botones">
+                            <button  class="BotonChico"type="button" id="CargarCorreo"> Cargar correo</button>
+                            <button  class="BotonChico"type="button" id="CorregirCorreo"> Corregir correo</button>
+                   </div>
+                   <br>
+    <label class="label_table" for="noOficioC">Numero de Oficio</label>
+                    <input  type="text" name="noOficioC" id="noOficioC">
+                    <br>
+
+                    <label class="label_table" for="tipoDocumentoC">TIPO DE DOCUMENTO</label>
+                    <textarea name="tipoDocumentoC" id="tipoDocumentoC" rows="2"></textarea>
+</fieldset>
+
+</div> 
+</form>
+
+
+
+<form id="formCaptura">
+
+
+                                            <fieldset class="TablaFS"> 
+                                            <legend class="TablaLeg" >Tabla de carga de datos del correo</legend>
+    <!-- Datos principales -->
+                  <table class="tabla_style capturaDeDatos" title="Captura de datos">
+                             <thead>
+
+                             </thead>
+<!--    
+    <div>
+        <label><input type="checkbox" id="capturar"> Capturar</label><br>
+        <label><input type="checkbox" id="corregir"> Corregir</label><br>
+        <label><input type="checkbox" id="limpiar"> Limpiar</label><br>
+        <label><input type="checkbox" id="revisarNoOficio"> Revisar No. Oficio</label><br>
+        <label><input type="checkbox" id="revisarFechas"> Revisar Fechas</label>
+    </div>
+-->    
+                  <tbody>
     
-             <tr>
+                            <tr>
          
-                    <td>
-                        <label class="label_table" for="folio">Folio CGPII</label>
+                             <td>
+                             <label class="label_table" for="folio">Folio CGPII</label>
                            <input type="text" name="folio"  id="folio">
-                    </td>
+                             </td>
                         
 
-                    <td>
-                          <label class="label_table" for="fechaRecepcion">Fecha Recepción</label>
-                          <input type="date" name="fechaRecepcion" id="fechaRecepcion">
-                    </td>
+                            <td>
+                            <label class="label_table" for="fechaRecepcion">Fecha Recepción</label>
+                            <input type="date" name="fechaRecepcion" id="fechaRecepcion">
+                            </td>
                            
                      <td>
                             <label class="label_table" for="tipoDocumento">Tipo Documento</label>
@@ -82,19 +119,23 @@
 
                      <label>Turnado a</label> <br>
 
-                     <div class="turnados"><label class="turnadosL">Dirección </label> <input type="checkbox" id="turnadoDireccion"> </div>   <br>
+                     <div class="turnados"><label class="turnadosL">Dirección </label> <input type="checkbox"  name="turnadoDireccion"  id="turnadoDireccion"> </div>   <br>
 
-                     <div class="turnados"><label class="turnadosL"> Encargado de Acuerdos</label> <input type="checkbox" id="turnadoEncargado"></div>  <br>
+                     <div class="turnados"><label class="turnadosL"> Encargado de Acuerdos</label> <input type="checkbox"  name="turnadoEncargado" id="turnadoEncargado"></div>  <br>
                      
-                     <div class="turnados"><label class="turnadosL">Departamento de Servicios Administrativos</label><input type="checkbox" id="turnadoServAdmin"></div>  <br>
+                     <div class="turnados"><label class="turnadosL">Departamento de Servicios Administrativos</label><input type="checkbox" name="turnadoServAdmin" id="turnadoServAdmin"></div>  <br>
                      
-                     <div class="turnados"><label class="turnadosL">  Division de Planeación y Prospectva </label><input type="checkbox" id="turnadoDivisionPlaneacion"></div>  <br>
-                     <div class="turnados"><label class="turnadosL"> Division de Proyectos e Infraestructura  </label><input type="checkbox" id="turnadoDivisionProyectos"></div>  <br>
-                     <div class="turnados"><label class="turnadosL"> Departamento de analisis y </label><input type="checkbox" id="turnadoDepartamentoAnalisis"></div>  <br>
-                     <label class="turnadosL"> seguimiento de la infraestructura física </label>
-                     <div class="turnados"><label class="turnadosL"> Departamento de Planeación </label> <input type="checkbox" id="turnadoDepartamentoPlaneacion"></div> <br>               
-                     </td>
-
+                     <div class="turnados"><label class="turnadosL">  Division de Planeación y Prospectva </label><input type="checkbox" name="turnadoDivisionPlaneacion" id="turnadoDivisionPlaneacion"></div>  <br>
+                     <div class="turnados"><label class="turnadosL"> Division de Proyectos e Infraestructura  </label><input type="checkbox" name="turnadoDivisionProyectos" id="turnadoDivisionProyectos"></div>  <br>
+                     <div class="turnados"><label class="turnadosL"> Departamento de analisis y  seguimiento de la infraestructura física</label><input type="checkbox" name="turnadoDepartamentoAnalisis" id="turnadoDepartamentoAnalisis"></div>
+                     <div class="turnados"><label class="turnadosL"> Departamento de Planeación </label> <input type="checkbox" name="turnadoDepartamentoPlaneacion" id="turnadoDepartamentoPlaneacion"></div> <br>               
+                     
+                     <input 
+                     readonly 
+                     class="paso"
+                     name="turnadoA"> 
+                    </td>
+                        
                </tr>                                             
 
                <tr>
@@ -109,15 +150,22 @@
                        </td>
                                       
                         <td>
-                                <label class="label_table" for="numeroOficio">No. Oficio</label>
-                                      <input type="text" name="numeroOficio" id="numeroOficio">
+                                <label class="label_table" for="NoOficio">No. Oficio</label>
+                                      <input type="text" name="noOficio" id="noOficio">
 
                         </td>   
                                                         
                </tr> 
 
                <tr>
-                    
+                        <td>
+
+
+                          <label class="label_table" for="remitente">Remitente (Nombre completo y cargo)</label><br>
+                          <textarea name="remitente" id="remitente" ></textarea>
+
+                       </td>     
+
                         <td>
                              
                                <label class="label_table" for="dirigidoA">Dirigido a</label>
@@ -126,16 +174,54 @@
                         </td>
                          
                         
-                        <td>
+                        <!--<td>
                                 <label  class="label_table" for="anexo">Anexo</label>
                                    <input type="text" name="anexo" id="anexo">
                              
                         </td>
-                                   
+                    -->            
                         <td> 
 
-                                 <label class="label_table" for="carpeta">Carpeta</label>
-                                   <input type="text" name="carpeta" id="carpeta">
+                                 
+                                 <input
+                                       name="nombreCarpeta"
+                                       id="nombreCarpeta"
+                                       class="input_tabla paso"
+                                       aria-label="Nombre de la Carpeta"
+                                       readonly
+                                 >
+                                <div class="contenedorArchivo">
+                                <label class="label_table" for="ArchivoAnexo">Carpeta</label>
+                                    <input
+                                      type="file"
+                                      id="ArchivoAnexo"
+                                      name="ArchivoAnexo"
+                                      class="archivoInput "
+                                      data-compa2="nombreCarpeta"
+                                      data-compa="urlCarpeta"
+                                      data-compa3="nombreaArchivo"
+                                      multiple
+                                      accept=".pdf,.xlsx,.doc,.docx,.png,.jpg"
+                                >
+
+                               <span 
+                                     id="nombreaArchivo" 
+                                     class="nombreArchivo"
+                              ></span>
+                
+
+
+                              <textarea
+                                        id="urlCarpeta"
+                                        name="urlCarpeta"
+                                        class="auto-expand input_tabla paso"
+                                        rows="1"
+                                        readonly                
+                                        style="resize:none;"
+                                        aria-label="Url de la carpeta de Anexos"
+                              > </textarea>  
+
+
                         </td>  
                                    
 
@@ -149,21 +235,9 @@
                            <label class="label_table" for="asunto">Asunto / Descripción Clara</label><br>
                          <textarea  name="asunto" id="asunto" ></textarea>
                     </td>
-                        
+                     
                     
                     <td>
-
-
-                          <label class="label_table" for="remitente">Remitente (Nombre completo y cargo)</label><br>
-                          <textarea name="remitente" id="remitente" ></textarea>
-
-                    </td>
-
-               </tr>
-              
-
-               <tr>
-                     <td>
                            <label class="label_table" for="fechaLimite">Fecha límite</label>
                              <input type="date"  name="fechaLimite"  id="fechaLimite">
 
@@ -174,31 +248,38 @@
                                      <input type="date" name="fechaTurnado" id="fechaTurnado">
 
                       </td>
+
+                    
+                    
+
+               </tr>
+              
+
+               <tr>
+                     
+                       
                        <td>
                                     <label class="label_table" for="numeroAnexos">No. Anexos</label>
                              <input type="number"  name="numeroAnexos" id="numeroAnexos">
                        </td>  
-                            
-
-               </tr>
-
-               <tr>
-                           <td>   <label class="label_table" for="medioTurnado">Medio Turnado</label>
+                       <td>   <label class="label_table" for="medioTurnado">Medio Turnado</label>
                                   <input class="label_table" type="text" name="medioTurnado" id="medioTurnado">
                            </td>     
                            <td>     
                                   <label  class="label_table" for="instruccion">Instrucción</label>
                                   <input type="text" name="instruccion" id="instruccion">
-                           </td>     
+                        </td>     
+
+               </tr>
+
+               <tr>
+                                
                            <td>  
                                   <label class="label_table"  for="otraInstruccion">Otra</label>
                                   <input type="text" name="otraInstruccion" id="otraInstruccion">
                            </td>                 
 
-               </tr> 
-
-               <tr>
-                        <td>
+                           <td>
                                      <label class="label_table" for="estatus">Estatus</label>
                                      <input  type="text" name="estatus" id="estatus">
                          </td>     
@@ -206,7 +287,11 @@
                                      <label class="label_table" for="observaciones">Observaciones</label>
                                      <textarea name="observaciones" id="observaciones" rows="2"></textarea>
                           </td>     
-                           <td>
+                       
+               </tr> 
+
+               <tr>
+                            <td>
                                      <label class="label_table" for="archivadoEn">Archivado en</label>
                                      <input type="text" name="archivadoEn" id="archivadoEn">
                            </td>
@@ -214,27 +299,20 @@
                
 
     </tbody>
-        
+</fieldset>        
     
-<button  class="BotonChico"type="button" id="Guardar"> Guardar</button>
-    
- 
-    
-
-
-    
-
 
     <!-- Turnado -->
 </table>
-    
+<button  class="BotonChico"type="button" id="Capturar"> Capturar correo</button>    
 
 </form>
-
+<div id="estadoCarga" class="toast-carga"></div>
+<div id="estadoGuardado" class="toast-guardado"></div>
 </body>
 
 
-<script src="codigo.js"></script>   
+<script src="codigoCaptura.js"></script>   
 
 
 </html>
