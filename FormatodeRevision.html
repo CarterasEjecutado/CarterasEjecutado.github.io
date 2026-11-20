@@ -31,7 +31,7 @@
 
 
 <h1>Correo DPO-Formato de Revision</h1>
-
+<h2 id="AreadeRecepcion"> </h2>
     <form id="formRevision">
 
     <!-- Columna izquierda -->
@@ -47,229 +47,216 @@
         <a href="index.html" class="A5000"><img src="Inicio.png" class ="A5000" alt="IPN" title="Abrir Formulario Adquisición">
         </a>
  </div>
+                     <div class="carga">
+                            <div class="DEP">     
+                                        <input  type="text" id="folioInput" placeholder="Ingresa tu folio">  
+                                        <button type="button" id="cargarArea">
+                                                    Cargar Area
+                            </button>
+                            </div>
+                            <div  class="">
+                                <label   for="area">Area</label>
+                                 <select name="area" id="area" class="IGS" required>
+                                    <option  value="">-Elija el area a la que pertenece su recepcion de correo-</option>
+                                    <option value="Admin">Administrador</option>
+                                    <option value="Acuerdos">Encargado de Acuerdos</option>
+                                    <option value="Sadministrativos">Departamento de Servicios Administrativos</option>   
+                                    <option value="Direccion">Dirección</option> 
+                                    <option value="DivPlaneacion">División de Planeación y Prospectiva</option>  
+                                    <option value="DivProyectos">División de Proyectos e Infraestructura</option>                        
+                                    
+                                </select>
+                            </div>    
+                      </div>
 
     <!-- Datos principales -->
-<table class="tabla_style capturaDeDatos" title="Captura de datos">
+<div class="tabla-scroll">     
+<table class=" tabla_style capturaDeDatos" title="Captura de datos">
     <thead>
+    <!---->
+        <tr><th colspan="17"> General</th> <th colspan="4">direccion</th> <th colspan="4">division de Planeación y Prospectiva</th> <th colspan="4">division de Proyectos e Infraestructura</th><th colspan="4">Departamento de servicios Administrativos</th> <th colspan="4">Encargado de Acuerdos</th> </tr>
+         <tr>
+                   <th class="rubros">
+                                Numero de Turnado
+                            </th>
+
+                             <th class="rubros">
+                             Folio CGPII
+                             </th>
+                        
+
+                               <th class="rubros">
+                                  Fecha Recepción
+                               </th>
+                           
+                     <th class="rubros">
+                            Tipo Documento
+                     </th>
+                     <th class="rubros"> 
+                     Turnado A 
+                    </th>
+                                                              
+
+                       <th class="rubros">
+                                Correspondencia
+                       </th>
+                                      
+                       <th class="rubros">
+                              Fecha Folio
+                       </th>
+                                      
+                        <th class="rubros">
+                            No. Oficio
+                        </th>   
+
+                        <th class="rubros">
+                          Remitente (Nombre completo y cargo)
+                       </th>     
+
+                        <th class="rubros">
+                             Dirigido a
+                        </th>
+                         
+                                   
+                        <th class="rubros"> 
+                            Carpeta de anexos
+                        </th>  
+                                   
+
+                    <th class="rubros">
+                        Asunto / Descripción Clara
+                    </th>
+                     
+                    
+                    <th class="rubros">
+                           Fecha límite
+                     </th>     
+                             
+                      <th class="rubros">
+                             Fecha Turnado
+                      </th>
+                        
+                       <th class="rubros">
+                            Medio Turnado
+                       </th>     
+                      
+                       <th class="rubros">     
+                                  Instrucción
+                        </th>     
+
+                      
+                        
+
+                         <th class="rubros">
+                                     Archivado En
+                                    
+                        </th>
+
+                        <th class="rubros">
+                             Recepcion de Acuse
+                             
+                        </th>
+                        <th class="rubros">
+                                  Estatus
+                            
+                        </th>     
+                        <th class="rubros">
+                                  Observaciones
+                        </th>     
+                          
+                        <th class="rubros">
+                             Documento anexo respuesta
+                             
+                        </th>
+                        <th class="rubros">
+                             Recepcion de Acuse
+                             
+                        </th>
+                        <th class="rubros">
+                                  Estatus
+                            
+                        </th>     
+                        <th class="rubros">
+                                  Observaciones
+                        </th>     
+                          
+                        <th class="rubros">
+                             Documento anexo respuesta
+                             
+                        </th>
+                        <th class="rubros">
+                             Recepcion de Acuse
+                             
+                        </th>
+                        <th class="rubros">
+                                  Estatus
+                            
+                        </th>     
+                        <th class="rubros">
+                                  Observaciones
+                        </th>     
+                          
+                        <th class="rubros">
+                             Documento anexo respuesta
+                             
+                        </th>
+                        <th class="rubros">
+                             Recepcion de Acuse
+                             
+                        </th>
+                        <th class="rubros">
+                                  Estatus
+                            
+                        </th>     
+                        <th class="rubros">
+                                  Observaciones
+                        </th>     
+                          
+                        <th class="rubros">
+                             Documento anexo respuesta
+                             
+                        </th><th class="rubros">
+                             Recepcion de Acuse
+                             
+                        </th>
+                        <th class="rubros">
+                                  Estatus
+                            
+                        </th>     
+                        <th class="rubros">
+                                  Observaciones
+                        </th>     
+                          
+                        <th class="rubros">
+                             Documento anexo respuesta
+                             
+                        </th>
+           </tr>
+                            
+               
+     
 
     </thead>
-<!--    
-    <div>
-        <label><input type="checkbox" id="capturar"> Capturar</label><br>
-        <label><input type="checkbox" id="corregir"> Corregir</label><br>
-        <label><input type="checkbox" id="limpiar"> Limpiar</label><br>
-        <label><input type="checkbox" id="revisarNoOficio"> Revisar No. Oficio</label><br>
-        <label><input type="checkbox" id="revisarFechas"> Revisar Fechas</label>
-    </div>
--->    
-    <tbody>
+    <tbody id="tablaBody">
     
-    <tr > <td class="Encabezado" colspan="4">Rubros de BUsqueda para corrección</td></tr> 
-               
-               <tr>
-                        <td>
-                                     <label class="label_table" for="NumeroOficio">Numero de Oficio</label>
-                                     <input  type="text" name="NumeroOficio" id="NumeroOficio">
-                         </td>     
-                           <td>
-                                     <label class="label_table" for="TipoDocumento">TIPO DE DOCUMENTO</label>
-                                     <textarea name="TipoDocumento" id="TipoDocumento" rows="2"></textarea>
-                          </td>     
-                           <td>
-                                     <label class="label_table" for="CorreoElectronico">Correo Electronico</label>
-                                     <input type="text" name="CorreoElectronico" id="CorreoElectronico">
-                           </td> 
-                           <td>
-                                     <label class="label_table" for="NumeroAnexo">NUMERO DE ANEXO</label>
-                                     <input type="text" name="NumeroAnexo" id="NumeroAnexo">
-                           </td>    
-                                  
-
-                  
-               </tr>
-
-
-
-
-
-
-             <tr>
-         
-                    <td>
-                        <label class="label_table" for="folio">Folio CGPII</label>
-                           <input type="text" name="folio"  id="folio">
-                    </td>
-                        
-
-                    <td>
-                          <label class="label_table" for="fechaRecepcion">Fecha Recepción</label>
-                          <input type="date" name="fechaRecepcion" id="fechaRecepcion">
-                    </td>
-                           
-                     <td>
-                            <label class="label_table" for="tipoDocumento">Tipo Documento</label>
-                            <input type="text" name="tipoDocumento" id="tipoDocumento">
-                     </td>
-                     
-                     <td rowspan="7">
-
-                     <label>Turnado a</label> <br>
-
-                     <div class="turnados"><label class="turnadosL">Dirección </label> <input type="checkbox" id="turnadoDireccion"> </div>   <br>
-
-                     <div class="turnados"><label class="turnadosL"> Encargado de Acuerdos</label> <input type="checkbox" id="turnadoEncargado"></div>  <br>
-                     
-                     <div class="turnados"><label class="turnadosL">Departamento de Servicios Administrativos</label><input type="checkbox" id="turnadoServAdmin"></div>  <br>
-                     
-                     <div class="turnados"><label class="turnadosL">  Division de Planeación y Prospectva </label><input type="checkbox" id="turnadoDivisionPlaneacion"></div>  <br>
-                     <div class="turnados"><label class="turnadosL"> Division de Proyectos e Infraestructura  </label><input type="checkbox" id="turnadoDivisionProyectos"></div>  <br>
-                     <div class="turnados"><label class="turnadosL"> Departamento de analisis y </label><input type="checkbox" id="turnadoDepartamentoAnalisis"></div>  <br>
-                     <label class="turnadosL"> seguimiento de la infraestructura física </label>
-                     <div class="turnados"><label class="turnadosL"> Departamento de Planeación </label> <input type="checkbox" id="turnadoDepartamentoPlaneacion"></div> <br>               
-                     </td>
-
-               </tr>                                             
-
-               <tr>
-                       <td>
-                                <label  class="label_table" for="correspondencia">Correspondencia</label>
-                                <input type="text" name="correspondencia" id="correspondencia">
-                       </td>
-                                      
-                       <td>
-                                <label class="label_table" for="fechaFolio">Fecha Folio</label>
-                                      <input type="date" name="fechaFolio" id="fechaFolio">
-                       </td>
-                                      
-                        <td>
-                                <label class="label_table" for="numeroOficio">No. Oficio</label>
-                                      <input type="text" name="numeroOficio" id="numeroOficio">
-
-                        </td>   
-                                                        
-               </tr> 
-
-               <tr>
-                    
-                        <td>
-                             
-                               <label class="label_table" for="dirigidoA">Dirigido a</label>
-                                   <input type="text" name="dirigidoA" id="dirigidoA">
-
-                        </td>
-                         
-                        
-                        <td>
-                                <label  class="label_table" for="anexo">Anexo</label>
-                                   <input type="text" name="anexo" id="anexo">
-                             
-                        </td>
-                                   
-                        <td> 
-
-                                 <label class="label_table" for="carpeta">Carpeta</label>
-                                   <input type="text" name="carpeta" id="carpeta">
-                        </td>  
-                                   
-
-               </tr> 
-    
-               <tr>
-                    
-
-                    <td>
-
-                           <label class="label_table" for="asunto">Asunto / Descripción Clara</label><br>
-                         <textarea  name="asunto" id="asunto" ></textarea>
-                    </td>
-                        
-                    
-                    <td>
-
-
-                          <label class="label_table" for="remitente">Remitente (Nombre completo y cargo)</label><br>
-                          <textarea name="remitente" id="remitente" ></textarea>
-
-                    </td>
-
-               </tr>
-              
-
-               <tr>
-                     <td>
-                           <label class="label_table" for="fechaLimite">Fecha límite</label>
-                             <input type="date"  name="fechaLimite"  id="fechaLimite">
-
-                     </td>     
-                             
-                      <td>
-                                     <label class="label_table" for="fechaTurnado">Fecha Turnado</label>
-                                     <input type="date" name="fechaTurnado" id="fechaTurnado">
-
-                      </td>
-                       <td>
-                                    <label class="label_table" for="numeroAnexos">No. Anexos</label>
-                             <input type="number"  name="numeroAnexos" id="numeroAnexos">
-                       </td>  
-                            
-
-               </tr>
-
-               <tr>
-                           <td>   <label class="label_table" for="medioTurnado">Medio Turnado</label>
-                                  <input class="label_table" type="text" name="medioTurnado" id="medioTurnado">
-                           </td>     
-                           <td>     
-                                  <label  class="label_table" for="instruccion">Instrucción</label>
-                                  <input type="text" name="instruccion" id="instruccion">
-                           </td>     
-                           <td>  
-                                  <label class="label_table"  for="otraInstruccion">Otra</label>
-                                  <input type="text" name="otraInstruccion" id="otraInstruccion">
-                           </td>                 
-
-               </tr> 
-
-               <tr>
-                        <td>
-                                     <label class="label_table" for="estatus">Estatus</label>
-                                     <input  type="text" name="estatus" id="estatus">
-                         </td>     
-                           <td>
-                                     <label class="label_table" for="observaciones">Observaciones</label>
-                                     <textarea name="observaciones" id="observaciones" rows="2"></textarea>
-                          </td>     
-                           <td>
-                                     <label class="label_table" for="archivadoEn">Archivado en</label>
-                                     <input type="text" name="archivadoEn" id="archivadoEn">
-                           </td>
-               </tr>
-               
+                
                
 
 
     </tbody>
         
-    
+</table> 
+</div>   
 <button  class="BotonChico"type="button" id="Guardar"> Guardar</button>
-    
- 
-    
-
-
-    
-
-
-    <!-- Turnado -->
-
     
 
 </form>
-
+<div id="estadoCarga" class="toast-carga"></div>
+<div id="estadoGuardado" class="toast-guardado"></div>
 </body>
 
 
-<script src="codigo.js"></script>   
+<script src="codigoCarga.js"></script>   
 
 
 </html>
