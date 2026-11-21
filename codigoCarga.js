@@ -637,7 +637,7 @@ function mostrarColumnasPorArea(area) {
 
             const encabezado = encabezados[columna];
 
-            if (encabezado) {
+/*            if (encabezado) {
                 encabezado.style.display =
                     visible ? "" : "none";
 
@@ -645,7 +645,12 @@ function mostrarColumnasPorArea(area) {
                 encabezado.style.visibility =
                     esAdmin ? "visible" : "hidden";
             }
+*/
 
+         if (encabezado) {
+    encabezado.style.display = visible ? "" : "none";
+    encabezado.style.visibility = visible ? "visible" : "hidden";
+}
             filas.forEach(fila => {
 
                 const celda = fila.children[columna];
